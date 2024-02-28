@@ -16,17 +16,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name : upload 
-      uses: actions/upload-artifact@v4
-      with:
-       name: my-artifact
-       path: requirements.txt
-    - name : download
-      uses: actions/download-artifact@v4
-      with:
-       name: my-artifact
-    - name: Display structure of downloaded files
-      run: ls -R   
     - name: Install dependencies
       run: |
         pip install --upgrade pip
